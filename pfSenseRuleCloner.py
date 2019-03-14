@@ -13,7 +13,7 @@ def isClonedInt(cloneInt, rule):
         return False
     return ruleInt.text == cloneInt
 
-def cloneRule(clone2Int, rule): #need to "pass rule by value", not default behavior
+def cloneRule(clone2Int, rule):
     newRule = deepcopy(rule)
     newRule.find('interface').text = clone2Int
     return newRule
