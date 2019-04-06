@@ -43,8 +43,9 @@ def friendlyNames():
     print("-----------------------------")
     for interface in interfaces:
         print(interface.find("descr").text + ":   " + interface.tag)
-            
-while True:
+
+action = "0"
+while action != "4":
     action = printMenu()
     if action == "1":
         friendlyNames()
@@ -52,9 +53,4 @@ while True:
     elif action == "2":
         intClone()
     elif action == "3":
-        break
-    elif action == "4":
-        exit()
-                    
-        
-config.write('out.xml')
+        config.write('out.xml')
